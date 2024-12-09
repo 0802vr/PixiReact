@@ -1,0 +1,276 @@
+@use "@/style/ref/variables.scss" as variables;
+.awards-container-main {
+  position: relative;
+  height: 100%;
+}
+
+@media (min-width:1000px) {
+  /* .awards-container_pos {
+    height: fit-content;
+    width: clamp(400px, 160px + 25vw, 640px);
+    position: fixed;
+  }
+  .awards-container_pos_absolute {
+    position: absolute;
+    bottom: 150px;
+  } */
+  .awards-container {
+    height: fit-content;
+    width: clamp(400px, 160px + 25vw, 640px);
+  }
+  .awardsFixed {
+    position: fixed;    
+    top:0;
+  }
+  .awardsNotFixed {
+    position: relative;
+  }
+  .awardsAbsolute {
+    position: absolute;
+    bottom: 150px; 
+  }
+}
+@media (min-width:1440px) {
+ /*  .awards-container_pos_absolute {
+    position: absolute;
+    bottom: 200px;
+  } */
+  .awardsFixed {
+    position: fixed;
+    top:0;
+  }
+  .awardsNotFixed {
+    position: relative;
+  }
+  .awardsAbsolute {
+    position: absolute;
+    bottom: 200px; 
+  }
+}
+@media (min-width: 2000px) {
+  .awards-container {
+    width:calc(43% - 40px);
+  }
+}
+.awards-container {
+  .awards-title {
+    font-family: variables.$text-titles;
+    font-size: 40px;
+    line-height: 120%;
+  }
+
+  .awards-description {
+    color: variables.$text-gray-color;
+    line-height: 120%;
+    font-family: variables.$text-primary;
+  }
+
+  .rewards-table {
+    margin-top: 20px;
+
+    border-radius: 8px;
+    outline: 1px solid variables.$border-color;
+
+    .rewards-list {
+      .reward-item {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 1px solid transparent;
+        border-image: repeating-linear-gradient(
+            to right,
+            #4c4c4c 0,
+            #4c4c4c 8px,
+            transparent 8px,
+            transparent 16px
+          )
+          1;
+
+        .invite-text {
+          font-weight: 500;
+          font-family: variables.$text-primary;
+          font-size: 16px;
+          display: flex;
+          align-items: flex-end;
+          line-height: 145%;
+        }
+
+        .points {
+          font-family: variables.$text-pixel;
+          font-size: 30px;
+          text-transform: uppercase;
+          display: flex;
+          align-items: flex-end;
+          line-height: 90%;
+
+          #text {
+            text-align: end;
+          }
+        }
+
+        &.completed {
+          .invite-text {
+            color: variables.$text-aqua-blue-color;
+          }
+          .points {
+            color: variables.$text-aqua-blue-color;
+          }
+        }
+
+        &.not-completed {
+          .invite-text {
+            color: variables.$text-gray-color;
+          }
+          .points {
+            color: variables.$text-gray-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 100px) {
+  .awards-container {
+    .rewards-table {
+      .rewards-list {
+        padding: 20px 20px;
+        .reward-item {
+          padding-top: 16px;
+          padding-bottom: 12px;
+
+          &:first-of-type {
+            padding-top: 0;
+          }
+
+          &:last-of-type {
+            padding-bottom: 0;
+            border-image: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) {
+  .awards-container {
+    .rewards-table {
+      .rewards-list {
+        padding: 20px 20px;
+        .reward-item {
+          padding-top: 16px;
+          padding-bottom: 12px;
+
+          &:first-of-type {
+            padding-top: 0;
+          }
+
+          &:last-of-type {
+            padding-bottom: 0;
+            border-image: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 568px) {
+  .awards-container {
+    .rewards-table {
+      .rewards-list {
+        // padding: 16px 20px;
+        padding-top: clamp(20px, 2.96px + 3vw, 26px);
+        padding-bottom: clamp(20px, 2.96px + 3vw, 26px);
+        padding-right: clamp(20px, -8.4px + 5vw, 30px);
+        padding-left: clamp(20px, -8.4px + 5vw, 30px);
+        .reward-item {
+          padding-top: clamp(16px, 4.64px + 2vw, 20px);
+          padding-bottom: clamp(12px, 0.64px + 2vw, 16px);
+
+          &:first-of-type {
+            padding-top: 0;
+          }
+
+          &:last-of-type {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .referral-history {
+    margin-top: clamp(60px, 7.89px + 9.174vw, 80px);
+  }
+}
+
+@media (min-width: 768px) {
+  .awards-container {
+    .rewards-table {
+      .rewards-list {
+        .reward-item {
+          &:first-of-type {
+            padding-top: 0;
+          }
+
+          &:last-of-type {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .awards-container {
+    .rewards-table {
+      .rewards-list {
+        padding: clamp(20px, -2.727px + 2.273vw, 30px)
+          clamp(24px, -12.364px + 3.636vw, 40px);
+
+        .reward-item {
+          padding-top: 16px;
+          padding-bottom: 12px;
+
+          &:first-of-type {
+            padding-top: 0;
+          }
+
+          &:last-of-type {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .awards-container {
+    .awards-title {
+      font-size: clamp(40px, 10px + 2.083vw, 50px);
+    }
+    .awards-description {
+      font-size: clamp(18px, 12px + 0.417vw, 20px);
+    }
+
+    .rewards-table {
+      margin-top: clamp(20px, -10px + 2.083vw, 30px);
+
+      .rewards-list {
+        .reward-item {
+          .invite-text {
+            font-size: clamp(16px, 4px + 0.833vw, 20px);
+          }
+          .points {
+            font-size: clamp(30px, 0px + 2.083vw, 40px);
+          }
+        }
+      }
+    }
+  }
+}

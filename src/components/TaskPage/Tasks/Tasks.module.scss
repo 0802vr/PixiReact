@@ -1,0 +1,148 @@
+@use '@/style/variables' as vars;
+@use '@/style/adapt' as adapt;
+ 
+.sectionMainMargin {
+    /* max-width: 1400px; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+     
+  }
+  
+.tasksContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: adapt.adaptive-margin(30, 50);
+  padding-bottom: 200px;
+
+}
+.tasksLeftEls {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  z-index: 3;
+}
+.tasksRigthEls {
+  display: flex;
+  flex-direction: column;
+  width: adapt.adaptive-margin(520, 640);
+ 
+}
+.tasksRigthElsFixedBox {
+  position: relative;
+  height: 100%;
+ 
+}
+.Fixed {
+  position: fixed;
+  top:0;
+}
+.notFixed {
+  position: relative;
+}
+.Absolute {
+  position: absolute;
+  bottom: 0;
+
+   
+}
+.tasksRigthElsFixed {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: adapt.adaptive-margin(520, 640);
+
+}
+.tasksContainerTitle  {  
+  font: 400 adapt.adaptive-margin(96, 160) /1 vars.$fontF;   
+  color: rgb(254, 254, 254); 
+  cursor: url('../assets/cursor/2.png'), pointer;  
+  letter-spacing: -4.8px;  
+  margin-top: adapt.adaptive-margin(0, 20);
+}
+.tasksContainerTitleMob {
+  display: none;
+}
+@media (max-width:1439px) { 
+.tasksContainer {  
+  margin-top:30px;
+}
+/* .tasksRigthEls {   
+  width: 520px;   
+} */
+.tasksContainerTitle  {  
+ font-size: 96px;
+ margin-top: 0;
+ letter-spacing: -2px;
+}
+
+.tasksRigthEls {
+  display: flex;
+  flex-direction: column;
+  width: adapt.adaptive-marginL(410,520);
+  
+}
+.tasksRigthElsFixed {
+  width: adapt.adaptive-marginL(410,520);
+  
+}
+}
+@media (max-width:1250px) {
+  .sectionMainMargin {     
+    padding-left: 15px;
+    padding-right: 15px;     
+  }
+}
+@media (max-width:1000px) {
+  .tasksRigthEls, .tasksRigthElsFixed {    
+    width:410px;    
+  }
+   .tasksContainer {
+   padding: 70px 0 200px;
+}
+  
+}
+@media (max-width:960px) {
+  .tasksContainerTitle {
+    display: none;
+  }
+  .tasksContainerTitleMob {
+    display: block;
+    margin-top: 30px;
+    padding-top: 56px;
+  }
+  .tasksContainer {
+    flex-direction: column-reverse;
+    gap: 40px;
+    margin-top: 0;
+    padding: 0 0 200px;
+
+  }
+  .tasksLeftEls, .tasksRigthEls {
+    width: 100%;
+    
+  }
+  .tasksRigthElsFixed {
+    position: relative;
+    width: auto;
+  }
+}
+@media (max-width:800px) {
+   
+}
+@media (max-width:620px) {
+  .tasksContainerTitleMob {
+    display: block;
+    margin-top: 30px;
+    padding-top: 56px;
+  }
+}
+@media (max-width:580px) {
+   
+}
+@media (max-width:480px) {
+   
+  
+}

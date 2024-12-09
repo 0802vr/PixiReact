@@ -10,7 +10,17 @@
     @return calc(#{$min}px + (#{($max - $min)} * ((100vw - #{$min-width}) / (#{$max-w} - #{$min-w}))));
   }
 
- 
+  @function adaptive-marginL($min, $max) {
+    
+    $min-width: 1000px;
+    $max-width: 1440px;
+    $min-w: 1000;
+    $max-w: 1440;
+     
+     
+    @return calc(#{$min}px + (#{($max - $min)} * ((100vw - #{$min-width}) / (#{$max-w} - #{$min-w}))));
+  }
+
 
 @function adaptive-marginPl($min, $max) {
    

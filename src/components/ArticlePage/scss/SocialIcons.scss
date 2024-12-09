@@ -1,0 +1,27 @@
+@use "@/style/article/variables.scss" as variables;
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+    border: 1px solid variables.$border-color;
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+
+    &:hover {
+      background-color: variables.$hover-social-icon-color;
+    }
+  }
+}

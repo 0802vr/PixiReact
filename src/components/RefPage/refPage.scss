@@ -1,0 +1,214 @@
+@use '@/style/variables' as vars;
+@use '@/style/adapt' as adapt;
+.main-container {
+  width: 100%;
+  margin-top: 50px;
+  cursor: url("../assets/refPage/Own/cursorDefault.png"), auto;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: rgb(18 18 18);
+  overflow: hidden;
+  padding: 50px 40px 250px;
+   
+}
+.ProfileNav_padding {
+  padding-top: adapt.adaptive-margin(15,20);
+  background-color: #121212;
+}
+.right_cont_info {
+  display: none;
+}
+@media (min-width: 100px) {
+  // clamp(10px, -7.027px + 4.054vw, 16px)
+  .main-container {
+    .awards-container {
+      /* margin-left: clamp(10px, -7.027px + 4.054vw, 16px);
+      margin-right: clamp(10px, -7.027px + 4.054vw, 16px); */
+      margin-top: 30px;
+    }
+
+    .referral-container {
+      margin-top: 50px;
+    }
+
+    .referral-history {
+      /* margin-right: clamp(10px, -7.027px + 4.054vw, 16px);
+      margin-left: clamp(10px, -7.027px + 4.054vw, 16px); */
+      margin-top: 50px;
+    }
+
+    .balance-container {
+      margin-top: 20px;
+      /* margin-right: clamp(10px, -7.027px + 4.054vw, 16px);
+      margin-left: clamp(10px, -7.027px + 4.054vw, 16px); */
+    }
+
+    .information-container {
+      /* margin-right: clamp(10px, -7.027px + 4.054vw, 16px);
+      margin-left: clamp(10px, -7.027px + 4.054vw, 16px); */
+    }
+  }
+}
+
+@media (min-width: 568px) {
+  .main-container {
+    /* padding: 140px clamp(16px, -29.44px + 8vw, 32px); */
+
+    .awards-container {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .referral-container {
+      margin-top: 60px;
+
+      .referral-title {
+        margin-left: 0;
+      }
+    }
+
+    .referral-history {
+      margin-top: 60px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .balance-container {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .information-container {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    .referral-container {
+      margin-top: 80px;
+    }
+
+    .referral-history {
+      margin-top: 80px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: clamp(481px, 28.727px + 45.227vw, 680px) clamp(
+        411px,
+        163.273px + 24.773vw,
+        520px
+      );
+    grid-template-rows: auto auto auto;
+    column-gap: clamp(70px, -134.545px + 20.455vw, 160px);
+
+    /* padding: 100px clamp(16px, -38.545px + 5.455vw, 40px) 140px; */
+  }
+
+  .main-container .referral-container {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 60px;
+  }
+
+  .main-container .referral-history {
+    grid-column: 1;
+    // grid-row: 2 / 4;
+  }
+
+  .main-container .information-container {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .main-container .awards-container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    margin-top: 60px;
+  }
+
+  .main-container .balance-container {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+    /* height: clamp(136px, -23px + 11.042vw, 189px); */
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: clamp(680px, -40px + 50vw, 920px) clamp(
+        520px,
+        160px + 25vw,
+        640px
+      );
+    column-gap: clamp(160px, -200px + 25vw, 280px);
+
+    .referral-history {
+      margin-top: clamp(60px, -120px + 12.5vw, 120px);
+    }
+
+    .awards-container {
+      margin-top: 90px;
+    }
+
+    .referral-container {
+      // height: clamp(257px, 32px + 15.625vw, 332px);
+      // margin-top: clamp(80px, 20px + 4.167vw, 100px);
+      margin-top: 90px;
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .main-container {
+    column-gap: 14%;
+    grid-template-columns: 43% 43%;
+  }
+}
+@media (max-width: 1440px) {
+  .main-container {
+    padding: 50px 40px 200px;
+  }
+  .ProfileNav_padding {
+    padding-top: 15px;
+  }
+}
+@media (max-width: 1250px) {
+  .main-container {
+    padding: 30px 15px 200px;
+  }
+}
+
+@media (max-width: 999px) {
+  .ProfileNav_padding {
+    display: none;
+  }
+  .main-container {
+    padding: 100px 15px 200px;
+  }
+  .right_cont_info {
+    display: block;
+  }
+  .left_cont_info {
+    display: none;
+  }
+}
+@media (max-width: 520px) {
+  .main-container {
+    padding: 80px 0px 200px;
+    .referral-history, .right_cont, .referral-title {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

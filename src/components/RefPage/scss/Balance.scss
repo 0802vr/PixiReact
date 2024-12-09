@@ -1,0 +1,60 @@
+@use "@/style/ref/variables.scss" as variables;
+
+.balance-container {
+  outline: 1px solid variables.$border-color;
+  border-radius: 6px;
+
+  .balance-title {
+    font-family: variables.$text-titles;
+    font-size: 24px;
+    line-height: 90%;
+  }
+
+  .balance-item {
+    font-family: variables.$text-primary;
+    font-weight: 500;
+    color: variables.$text-gray-color;
+    margin-top: 10px;
+    .balance-amount {
+      font-family: variables.$text-pixel;
+      color: variables.$text-aqua-blue-color;
+      font-size: 34px;
+      line-height: 90%;
+    }
+  }
+}
+
+@media (min-width: 100px) {
+  .balance-container {
+    margin-top: 20px;
+    padding: 16px 20px;
+  }
+}
+
+@media (min-width: 568px) {
+  .balance-container {
+    padding: 16px clamp(20px, -8.4px + 5vw, 30px);
+  }
+}
+
+@media (min-width: 1000px) {
+  .balance-container {
+    padding: 16px clamp(24px, -12.364px + 3.636vw, 40px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .balance-container {
+    padding: clamp(16px, -26px + 2.917vw, 30px)
+      clamp(24px, -12.364px + 3.636vw, 40px);
+    .balance-title {
+      font-size: clamp(24px, 0px + 1.667vw, 32px);
+    }
+    .balance-item {
+      font-size: clamp(18px, 6px + 0.833vw, 22px);
+      .balance-amount {
+        font-size: clamp(36px, 6px + 2.083vw, 46px);
+      }
+    }
+  }
+}

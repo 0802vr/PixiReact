@@ -1,30 +1,31 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import svgr from 'vite-plugin-svgr'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import svgr from 'vite-plugin-svgr';
+import { resolve } from 'path'; // Импортируем resolve из path
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react(),  
-    svgr({
-      svgrOptions: {
-        // svgr options
-      },
-    })],
+    react(),
+    svgr()
+  ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'), // Настройка алиаса для папки src
+    },
+  },
   base: './',
   build: {
     sourcemap: true,
-    assetsDir:'./assets'
+    assetsDir: './assets'
   },
   css: {
-    devSourcemap:true,
+    devSourcemap: true,
     preprocessorOptions: {
       scss: {
-        silenceDeprecations: ['legacy-js-api'] // or "modern"
+        silenceDeprecations: ['legacy-js-api'] // или "modern"
       }
     }
   },
-  
-})
- 
+});
 

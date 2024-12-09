@@ -1,0 +1,677 @@
+@use '@/style/variables' as vars;
+@use '@/style/adapt' as adapt;
+.sectionMainMargin {
+   
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+     
+  } 
+   
+.section01Nav {
+    display: flex; 
+    align-items: center;  
+    margin-top: adapt.adaptive-margin(30, 40);
+    opacity: 0;
+    position: absolute;
+    z-index: 4;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+  }
+  .section01NavLogo {  
+      font: 400 46px /1 vars.$fontF;
+      font-size: adapt.adaptive-margin(46, 74);
+      color: rgb(254, 254, 254);
+      letter-spacing: -1.38px;     
+      min-width: adapt.adaptive-margin(460, 614);
+      cursor: url('../assets/cursor/2.png'), pointer;
+       
+  }
+  .section01NavBox {
+    display: flex;
+    align-items: end;
+    width: adapt.adaptive-margin(620, 880);
+    justify-content: space-between;
+    /* cursor: url('../assets/cursor/2.png'), pointer; */
+    flex: auto;
+    
+    
+  }
+  .section01NavBox_Active {
+    z-index: 4;
+    flex: none;
+    margin-left: auto;
+  }
+  .section01NavBox_Active_2 {
+    background: #262626;
+    
+    
+    .playerImage {
+        border: 2px solid #34D3D7;
+        border-radius: 50%;
+    }
+  }
+  .section01NavBoxLeft {
+    display: flex;
+    gap: 30px;
+    margin-bottom: adapt.adaptive-margin(8, 6);
+     
+     
+  }
+  .collectionsBox {
+    display: flex;
+    gap: 6px;
+    position: relative;
+    align-items: center;
+  }
+  .collectionsButton {
+    
+    font: 500 18px / 1 vars.$fontR;
+    font-size: adapt.adaptive-margin(18, 22);
+    color: rgb(254, 254, 254);
+    letter-spacing: -0.54px;
+  }
+  .collectionsImage {
+    width: 9px;
+    height: 9px;
+    margin-top: adapt.adaptive-margin(0,2);
+    /* margin-top: adapt.adaptive-margin(5, 9); */
+    transition: all 0.2s linear;
+  }
+  .additionalBlock {
+   /*  width: 139px;
+    height: 124px;   */ 
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: #212121;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 27px;
+    width: 140px;
+   /*  padding-right: 47px; */
+    flex-direction: column;
+    transition: all 0.2s linear;
+    gap: 16px;
+    display: flex;
+    opacity: 0; /* серый цвет */
+    position: absolute; /* позиционируем его абсолютно */
+    z-index: 10; /* чтобы блок располагался поверх других элементов */
+    margin-top: 5px; 
+    top: 100%;
+    left: -9px;/* добавление небольшого отступа от родительского элемента */
+  }
+  .additionalBlockLink {
+    color: #707070;
+    font-family: vars.$fontR;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 22px */
+    letter-spacing: -0.66px;
+    transition: 0.2s linear all;
+    display: flex;
+    align-items: center;
+  
+    &:hover {
+      color: #fefefe;
+       
+      .additionalBlockIcon {
+        margin-right: 5px;
+        width: adapt.adaptive-margin(5,8);
+        height: adapt.adaptive-margin(5,8);
+        opacity: 1;
+      }
+    }
+  }
+  
+  .additionalBlockIcon {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+  
+  .whitePaperButton {
+    font: 500 18px / 1 vars.$fontR;
+    font-size: adapt.adaptive-margin(18, 22);
+    color: rgb(254, 254, 254);
+    letter-spacing: -0.54px;
+  }
+  .blogButton {
+    font: 500 18px / 1 vars.$fontR;
+    font-size: adapt.adaptive-margin(18, 22);
+    color: rgb(254, 254, 254);
+    letter-spacing: -0.54px;
+    cursor: url('../assets/cursor/2.png'), pointer;
+  }
+  
+  .section01NavBoxRight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;   
+    margin-top: adapt.adaptive-margin(0,-2);
+  }
+  .playerInfoSection {
+    margin-top: adapt.adaptive-margin(0, 2);
+    cursor: url('../assets/cursor/2.png'), pointer;
+  }
+  .playerName {
+    margin: 0 14px 0 0;
+    /* width: 100px; */
+    height: 16px;
+    font: 500 16px/1 vars.$fontR;
+    font-size: adapt.adaptive-margin(16, 18);
+    color: rgb(254, 254, 254);
+  }
+  .playerIdSection {
+    display: flex;
+    align-items: baseline;
+    gap: 0 6px;
+    margin-top: adapt.adaptive-margin(0,2);
+  }
+  .playerImage {
+    width: adapt.adaptive-margin(40 , 53);
+    height: adapt.adaptive-margin(40 , 53);
+   /*  margin-top: -10px; */
+    border-radius: 20px;
+  }
+  .playerIdImage {
+    margin: 2px 0 adapt.adaptive-margin(3, 6);
+    width: adapt.adaptive-margin(10,14);
+    height: adapt.adaptive-margin(10,14);
+  
+  }
+  .playerIdText {   
+    font: 400 14px / 1.2 vars.$fontR, Helvetica, Arial, serif;
+    font-size: adapt.adaptive-margin(14, 18);
+    color: rgb(112, 112, 112);
+  }
+  .additionalBlockPlayer{
+    position: absolute;  
+    z-index: 10; 
+    margin-top: 5px; 
+    top: 100%;
+    right: 0;
+    width: 573px;
+    height: 300px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: #212121;
+    transition: max-height 0.1s ease, opacity 0.4s ease;
+    display: none;
+    gap: 10px;
+    padding: 20px 30px;
+    padding-right: 10px;
+    opacity: 0;
+  }
+  .additionalBlockPlayerGif {
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.20);
+  }
+  .additionalBlockPlayerBox2 {
+    display: flex;
+    flex-direction: column;  
+    width: 170px;
+  }
+  .additionalBlockPlayerBox2Title {
+    color: #717171;
+    font-family: vars.$fontR;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;  
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+  .additionalBlockPlayerLink {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 36px;
+    font-family: vars.$fontR;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; 
+    display: flex;   
+    color: #fefefe;  
+    /* color: #707070;    */
+    transition: all 0.2s linear;
+    &:hover {
+      /* color: #34D3D7; */
+      background-color: #313131;
+      border-radius: 4px;
+  
+      .additionalBlockPlayerIcon {
+         
+             
+         
+        
+        path {
+           
+        }
+      }
+    }
+  }
+  .additionalBlockPlayerLinkDisable {
+    pointer-events: none;
+    cursor: url(../assets/cursor/1.png), auto;
+    opacity: 0.4;
+    &:hover {
+      background-color: #212121;
+      border-radius: 0;
+      cursor: url(../assets/cursor/1.png), auto;
+    }
+
+  }
+  .additionalBlockPlayerIcon { 
+    width: 16px;
+    height: 16px;
+    margin-bottom: 3px;
+    
+    transition: all 0.2s linear;
+    path {
+      fill:#fefefe;
+    }
+    
+  }
+  .additionalBlockPlayerBox3 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+     
+  
+  }
+  .additionalBlockPlayerBox3Items {
+    display: flex;
+    flex-direction: column;
+     
+  }
+  .additionalBlockPlayerLinkLast {
+    margin-top: auto;
+    gap: 0;
+    span {
+      margin-top: 2px;
+    }
+    .additionalBlockPlayerIcon { 
+      width: 32px;
+      height: 32px;
+      margin: 0;
+      scale: 0.5;
+    }
+    &:hover {
+      color: #FD4C33;;
+       
+      .additionalBlockPlayerIcon {
+         
+         rect{
+          fill:#FD4C33;
+         }
+        
+        path {
+          fill:#FD4C33;
+        }
+      }
+    }
+  }
+  .additionalBlockPlayerBorderLine {
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.20);
+  }
+  .section01NavBtn { 
+    margin-left: adapt.adaptive-margin(40,56);   
+    cursor: url('../assets/cursor/2.png'), pointer;
+    flex: 1;
+  }
+  .section01NavBtnBox{
+    position: relative;
+    width: adapt.adaptive-margin(236, 295);
+    height: adapt.adaptive-margin(36, 45);
+    &:hover {
+      .playPeexiButton {
+        top: 0;
+        left: 0;
+        background-color: #34D3D7;
+        path {
+          fill: #34D3D7;
+        }
+      }
+      .playPeexiButtonText {
+        left: calc(50% - adapt.adaptive-margin(29, 35));
+        top: calc(50% - adapt.adaptive-margin(9, 9));
+      }
+    }
+  }
+  .section01BtnSvg {
+    width: adapt.adaptive-margin(236, 295);
+    height: adapt.adaptive-margin(36, 45);
+  }
+  .playPeexiButton {
+    position: absolute;
+    top: adapt.adaptive-margin(-6, -8);
+    left: adapt.adaptive-margin(-6, -8);
+    width: adapt.adaptive-margin(236, 295);
+    height: adapt.adaptive-margin(36, 45);
+   /*  background-image: url(../assets/headerBtn.svg); */
+    /* background-position: center; */
+    text-transform: capitalize; 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fefefe;
+    font: 500 16px/1.2 vars.$fontR, Helvetica, Arial, serif;
+    font-size: adapt.adaptive-margin(16, 18);
+    color: rgb(18, 18, 18);
+    letter-spacing: -0.48px;
+    text-align: center;
+    /* background-size: 100%;
+    background-repeat: no-repeat; */
+    cursor: url('../assets/cursor/2.png'), pointer;
+    transition: all 0.2s linear;
+    mask: url('../assets/mainPage/header/maskHeader.svg');
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    path {
+      transition: all 0.2s linear;
+      width: adapt.adaptive-margin(234, 295);
+      height: adapt.adaptive-margin(34, 45);
+    }
+     
+  }
+  .playPeexiButtonImage {
+    margin-left: 10px;
+
+  }
+  .playPeexiButtonText {
+    font: 500 16px/1.2 vars.$fontR, Helvetica, Arial, serif;
+    font-size: adapt.adaptive-margin(16, 18);
+    color: rgb(18, 18, 18);
+    letter-spacing: -0.48px;
+    text-align: center;
+    position: absolute;
+    left: calc(50% - adapt.adaptive-margin(35, 43));
+    top: calc(50% - adapt.adaptive-margin(15, 17));
+    transition: all 0.2s linear;
+  }
+  .burger {
+    display: none;
+  }
+  .section01NavBoxRight_mob {
+    display: none;
+  }
+  .additionalBlock,
+  .additionalBlockPlayer {
+    
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.4s ease, opacity 0.4s ease;
+}
+ 
+.visiblePlayer {
+    height: 300px; // Установите максимальную высоту, которая вам нужна
+    opacity: 1;
+    z-index: 1;
+    display: flex;
+}
+.visible {
+    height: auto; // Установите максимальную высоту, которая вам нужна
+    opacity: 1;
+}
+
+
+  @media (max-width:1440px) {
+    .section01MainBtnPlayBoxSvg {
+      width: 409px;
+      height: 44px;
+      margin-left: 6px;
+  }
+  .section01MainBtnPlayBoxBtn {  
+     
+    width: 410px;
+    height: 44px; 
+    font-size: 16px;
+    top: -6px;
+    left: 0px;
+    
+     
+  }
+  .section01MainBtnPlay {
+     
+    &:hover {
+      .section01MainBtnPlayBoxBtn {
+        top: 0;
+        left: 6px;
+        background-color: #34D3D7;
+        path {
+          fill: #34D3D7;
+        }
+      }
+      
+    }
+  }
+  .section01NavBtn {
+    margin-left: 40px;
+  }
+    .section01NavLogo {
+      font: 400 46px / 1 vars.$fontF;
+    }
+    .collectionsButton, .whitePaperButton, .blogButton {
+      font-size: 18px;
+      line-height: 0.7;
+    }
+    .section01MainBoxTitle {
+      margin-bottom: 16px;
+      margin-top: 140px;
+    }
+    .section01MainSubtitle {
+      font-size: 20px;
+      width: 512px;
+    }
+    .playerIdImage {
+      margin:0;
+      margin-bottom: 2px;
+      width: 12px;
+      height: 12px;
+    }
+    .section01NavBtnBox{
+       
+      width: 236px;
+      height: 36px;
+      &:hover {
+         
+        .playPeexiButtonText {
+          left: calc(50% - 31px);
+          top: calc(50% - 9px);
+        }
+      }
+    }
+    .section01BtnSvg {
+      width: 236px;
+      height: 36px;
+    }
+     .collectionsImage {
+      margin-top: 0;
+     }
+    .playPeexiButton {
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      width: 100%;  
+      height: 36px; 
+      path {
+        transition: all 0.2s linear;
+        width: 236px;
+        height: 36px;
+      }
+       
+    }
+    .playPeexiButtonText {    
+      font-size:16px;     
+      left: calc(50% - 35px);
+      top: calc(50% - 15px);
+       
+    }
+    .playerName {
+      font-size: 18px;
+      height: auto;
+    }
+    .playerIdText {
+      font-size: 16px;
+    }
+    
+     
+  }
+  @media (max-width:1340px) {
+     
+    .playerIdImage {
+      
+      margin-bottom: 1px;
+       
+    }
+    
+  }
+  @media (max-width:1250px) {
+     
+    .section01NavBoxLeft, .section01NavBtn {
+      display: none;
+    }
+    .section01NavLogo {
+      font: 400 46px / 22px vars.$fontF;
+      margin-top: 6px;
+      align-self: center;
+  }
+    .playerIdImage {
+      
+      margin-bottom: 0px;
+       
+    }
+    .burger {
+      display: block;
+    }
+    .section01NavBox {
+      width: 200px;
+      justify-content: end; 
+      height: 56px;
+      padding-bottom: 6px;
+      padding-top: 6px;
+      padding-left: 6px;
+      /* margin-top: -10px; */
+      flex: none;
+      margin-left: auto;
+    }
+    .sectionMainMargin {
+      /* max-width: 1400px; */
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+       
+    } 
+    .section01Nav {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .playerImage {
+      width: 44px;
+      height: 44px;
+      /* margin-top: -10px; */
+    }
+    .playerIdSection {
+      margin-top: 1px;
+      margin-bottom: 2px;
+    }
+    .playerIdImage {
+      width: 12px;
+      height: 12px;
+      margin-top: 0;
+    }
+    .playerInfoSection {
+      margin-top: 7px;
+    }
+    .additionalBlockPlayer {
+      display: none;
+    }
+    .section01NavBoxRight  {
+      width: 195px;
+      align-items: self-end;
+    }
+    .section01Nav {
+      margin-top: 20px;
+      align-items: baseline;
+    }
+     
+    
+  }
+  @media (max-width:1000px) {
+     
+    .section01NavLogo {
+       
+      width: fit-content;
+      min-width: fit-content;
+    }
+      
+  }
+   
+  @media (max-width:680px) {
+    
+    .section01Nav {
+      align-items: baseline;
+    }
+    .section01NavBoxRight_mob {
+      display: flex;
+      margin-top: 0;
+      margin-bottom: 30px;
+      .playerInfoSection {
+        display: block;
+      }
+    }
+    .section01MainBoxTitle {
+      margin-top: 90px;
+    }
+    
+    .section01NavLogo {
+      font-size: 40px;
+    }
+    .playerInfoSection {
+      display: none;
+    }
+    .playerImage {
+      border-radius: 50%;
+      border: 1px solid #fefefe;
+      width: 40px;
+      height: 40px;
+    }
+    .section01NavLogo {
+      
+      margin-top: 7px;
+       
+  }
+    .section01NavBox {
+      width: 50px;
+    }
+     
+    .section01NavLogo {
+      z-index: 3;
+  }
+  .section01NavBox_Active_2 {
+    background: none;
+  }
+  }
+   
+  @media (max-width:380px) {
+    .section01NavLogo {
+      font-size: 34px;
+    }
+  }
+  
+   
+  
+  

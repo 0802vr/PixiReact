@@ -1,10 +1,10 @@
-import {  useLayoutEffect, useRef } from "react";
+import {  useEffect, useRef } from "react";
 import { handleScrollEvent, shuffleAndSample } from "./functionTiles";
 
 const PlanetTile  = ()=> { 
   const sampleSize = 20; // Adjust as necessary
   const scope = useRef(null)
-  useLayoutEffect(() => {
+  useEffect(() => {
    
     const pixels1_1 = Array.from(document.querySelectorAll('.noise-blockFirst .track-1 .pixel'));
     const pixels1_2 = Array.from(document.querySelectorAll('.noise-blockFirst .track-2 .pixel'));

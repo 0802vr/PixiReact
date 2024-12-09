@@ -1,0 +1,24 @@
+@use '@/style/variables' as vars;
+@use '@/style/adapt' as adapt;
+.container {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(18 18 18);
+  overflow: hidden;
+  padding: adapt.adaptive-margin(154, 194) 0 adapt.adaptive-margin(250, 300);
+}
+@media (max-width: 1439px) {
+  .container {
+    padding: 154px 0 250px;
+
+  }
+}
+@media (max-width: 1250px) {
+  .container {
+    padding: 94px 0 200px;
+
+  }
+}

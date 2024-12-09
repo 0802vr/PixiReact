@@ -1,0 +1,24 @@
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(18 18 18);
+    overflow: hidden;
+    cursor: url('../assets/cursor/1.png'), pointer;
+    padding-bottom: 200px;
+  }
+  @media (max-width:1250px) {
+    .main {
+      padding-bottom: 150px;
+    }
+  }
+  @media (max-width:960px) {
+    .main {
+      padding-bottom: 100px;
+    }
+  }
+  @media (max-width:560px) {
+    .main {
+      padding-bottom: 50px;
+    }
+  }

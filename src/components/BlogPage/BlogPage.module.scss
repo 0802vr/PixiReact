@@ -1,0 +1,55 @@
+ 
+@use '@/style/adapt' as adapt;
+.mainContainer {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(18 18 18);
+  overflow: hidden;
+}
+
+@media (min-width: 100px) {
+  .mainContainer {
+    padding: 86px 15px 150px;
+  }
+}
+
+@media (min-width: 586px) {
+  .mainContainer {
+    padding:  86px 15px 200px;
+  }
+}
+
+@media (min-width: 786px) {
+  .mainContainer {
+    padding: 86px 15px 250px;
+  }
+}
+
+@media (min-width: 950px) {
+  .mainContainer {
+    padding: 104px 15px 250px;
+  }
+}
+
+@media (min-width: 1251px) {
+  .mainContainer {
+    padding: 104px 40px 250px;
+
+  }
+}
+@media (min-width: 1439px) {
+  .mainContainer {
+    padding: adapt.adaptive-margin(104, 154) 40px adapt.adaptive-margin(250, 300);
+
+  }
+}
+
+@media (min-width: 1920px) {
+  .mainContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

@@ -1,0 +1,35 @@
+@function adaptive-margin($min, $max) {
+  $min-width: 360px;
+  $max-width: 1920px;
+  $min-w: 360;
+  $max-w: 1920;
+
+  @return calc(
+    #{$min}px +
+      (#{($max - $min)} * ((100vw - #{$min-width}) / (#{$max-w} - #{$min-w})))
+  );
+}
+
+@function adaptive-margin-1250($min, $max) {
+  $min-width: 1250px;
+  $max-width: 1920px;
+  $min-w: 1250;
+  $max-w: 1920;
+
+  @return calc(
+    #{$min}px +
+      (#{($max - $min)} * ((100vw - #{$min-width}) / (#{$max-w} - #{$min-w})))
+  );
+}
+
+@function adaptive-margin-1440($min, $max) {
+  $min-width: 1440px;
+  $max-width: 1920px;
+  $min-w: 1440;
+  $max-w: 1920;
+
+  @return calc(
+    #{$min}px +
+      (#{($max - $min)} * ((100vw - #{$min-width}) / (#{$max-w} - #{$min-w})))
+  );
+}

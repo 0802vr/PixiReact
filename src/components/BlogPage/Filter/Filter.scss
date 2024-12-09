@@ -1,0 +1,90 @@
+@use "@/style/variables.scss" as variables;
+@use "@/style/adapt.scss" as adapt;
+
+.dropdown-block {
+  min-height: 48px;
+  position: relative;
+}
+.dropdown {
+  transition: all 0.2s linear;
+}
+.dropdownList {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 0; // Initially hidden
+  opacity: 0; // Initially hidden
+  overflow: hidden; // Prevent overflow when hidden
+}
+.ArrowDown {
+  transition: transform 0.2s linear;
+}
+.ArrowDown.rotate {
+  transform: rotate(180deg);
+}
+.dropdownList.open {
+  max-height: 500px; // Set a max height when open
+  opacity: 1; // Fully visible
+}
+.dropdown-menu {
+      
+  position: absolute;
+  right: 0;
+  cursor: url(../assets/cursor/2.png), auto;
+  background-color: variables.$background-color;
+  border-radius: 6px;
+  border: 1.4px solid variables.$border-color;
+  margin: 0;
+  padding: 10px 20px;
+  list-style-type: none;
+  box-sizing: border-box;
+  
+  .dropdown-item {
+    margin-top: 8px;
+    font-family: variables.$fontR;
+    color: variables.$text-dark-color;
+
+
+    &.active {
+      color: #fefefe;
+      max-height: 500px;
+      
+    }
+  }
+
+  .dropdown-toggle {
+    font-family: variables.$fontR;
+    display: flex;
+    align-items: baseline;
+    .filter-label {
+      margin-right: 4px;
+      color: variables.$text-dark-color;
+    }
+
+    .dropdown.active {
+      position: absolute;
+      margin-bottom: 20px;
+      z-index: 10;
+    }
+
+    .ArrowUp {
+      transform: rotate(180deg);
+    }
+    svg {
+      width: 18px;
+      height: 10px;
+      margin-left: 5px;
+      fill: #fefefe;
+
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .dropdown-menu {
+    font-size: adapt.adaptive-margin(18, 20);
+  }
+  .dropdown-menu .dropdown-item {
+    margin-top: adapt.adaptive-margin(8, 4);
+  }
+}
+
+ 

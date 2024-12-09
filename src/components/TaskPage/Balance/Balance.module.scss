@@ -1,0 +1,105 @@
+@use '@/style/variables' as vars;
+@use '@/style/adapt' as adapt;
+ 
+.sectionMainMargin {
+    
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+     
+  }
+
+.BalanceItems {
+  display: flex;
+  flex-direction: column;
+  cursor: url('../assets/cursor/2.png'), pointer;
+  padding: adapt.adaptive-margin(16, 30) 40px;
+  border-radius: 8px;
+  border: 1px solid #404040;
+}
+.BalanceTitle {
+  color: #FEFEFE;
+  font: 400 adapt.adaptive-margin(24, 32) /0.9 vars.$fontF;
+   
+}
+.BalanceCoinBox {
+  display: flex;
+  align-items: baseline;
+  gap: adapt.adaptive-margin(6, 8);
+  margin-top: 8px;
+}
+.BalanceCoinNum {
+  color:#34D3D7;
+  font:400 adapt.adaptive-margin(36, 46) /0.9 vars.$fontF;
+  text-transform: uppercase;
+}
+.BalanceCoinText {
+  color: #707070;
+  font:500 18px /1.2 vars.$fontR;
+
+}
+.BalanceTokenBox {
+  display: flex;
+  align-items: baseline;
+  gap: adapt.adaptive-margin(6, 8);
+  margin-top: 10px;
+}
+.BalanceTokenNum {
+  color:#34D3D7;
+  font:400 adapt.adaptive-margin(36, 46) /0.9 vars.$fontF;
+  text-transform: uppercase;
+}
+.BalanceTokenText {
+  color: #707070;
+  font:500 18px /1.2 vars.$fontR;
+}
+@media (max-width: 1439px) { 
+  
+.BalanceItems {  
+  padding: 16px adapt.adaptive-marginL(24, 40);  
+}
+.BalanceTitle {  
+  font-size: 24px;   
+}
+.BalanceCoinBox {  
+  gap: 6px; 
+}
+.BalanceCoinNum {
+  font-size: 36px;
+} 
+.BalanceTokenBox {
+ gap:6px;
+}
+.BalanceTokenNum {
+  font-size: 36px;
+} 
+}
+
+@media (max-width:1000px) {
+  .BalanceItems {
+    padding: 16px 24px;
+  }
+}
+@media (max-width:960px) {
+  .BalanceItems {     
+    padding: 16px 30px;    
+  }
+}
+@media (max-width:800px) {
+  
+   
+}
+@media (max-width:680px) {
+   
+}
+@media (max-width:580px) {
+   
+}
+@media (max-width:420px) {
+  .BalanceItems {
+    padding: 20px;
+  }
+  
+}

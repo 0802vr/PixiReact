@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
  
-@font-face {
-  font-family: 'Fifacks';
-  font-weight: normal;
-  font-style: normal;
-  src: url("../font/Fifaks10Dev1.ttf");
-   
-}
+ 
 @font-face {
   font-family: 'Fairfax';
   font-weight: normal;
@@ -15,16 +9,12 @@
    
 }
 :root {
-  font-family:Fifacks, Rubik, Fairfax;
+  font-family:Fairfax, Rubik;
   line-height: 1.5;
-  font-weight: 400;
-  /* color-scheme: light dark; */
+  font-weight: 400;   
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  /* font-synthesis: none;
-  text-rendering: optimizeLegibility; */
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  
   cursor: url(../assets/cursor/1.png), auto;
 }
 body::-webkit-scrollbar {
@@ -62,6 +52,8 @@ a, button {
   height: 120px;
   margin-top: -119px;
   z-index: 2;
+  position: relative;
+  overflow: hidden;
 }
 .noise-blockFooter {
  /*  margin-top: 0;
@@ -73,6 +65,9 @@ a, button {
     border: 1px solid #202020;     
     transition: all 0.2s linear;
     opacity: 0;
+    @media (min-width: 1440px) {
+      height: 30px;
+    }
   }
 }
 .noise-blockMain {

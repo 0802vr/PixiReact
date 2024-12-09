@@ -1,0 +1,109 @@
+@use '@/style/variables' as vars;
+@use '@/style/adapt' as adapt;
+ 
+.sectionMainMargin {
+    /* max-width: 1400px; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+     
+  }
+  .ProfileNav {
+    display: flex;
+    border-radius: 8px;     
+    border: 2px solid #404040;
+    padding: 6px;
+    margin-top: adapt.adaptive-margin(106, 134);
+    position: relative;
+    
+     
+
+     
+  }
+  .soonLabel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #404040;
+    font-family: "Rubik";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; 
+  }
+  /* .ActiveZIndex {
+    z-index: 5;
+    position: relative; 
+  } */
+  
+  .ProfileNavTitle {
+    cursor: url('../assets/cursor/2.png'), pointer;
+    color:  #707070;
+    font-family: vars.$fontR;
+    font-size: adapt.adaptive-margin(18, 22);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;  
+    padding: 15px adapt.adaptive-margin(20, 25);
+    transition: all 0.2s linear;
+    position: relative;
+   
+  }
+  .ProfileNavTitleActive {
+    color:  #121212;
+    background-color: #34D3D7;
+    border-radius: 6px;
+  }
+   
+@media (max-width:1439px) {  
+  .ProfileNavTitle {    
+    font-size: 18px;      
+    padding: 15px 20px;  
+  }
+  .ProfileNav {     
+    margin-top: 106px;
+     
+  }
+   
+}
+@media (max-width:1250px) {
+  .sectionMainMargin {     
+    padding-left: 15px;
+    padding-right: 15px;     
+  }
+  .ProfileNavTitle {     
+    padding: 15px 16px;   
+   
+  }
+  .ProfileNav {     
+    margin-top: 86px;
+     
+  }
+}
+@media (max-width:1050px) {
+
+  .ProfileNavTitle {     
+    padding: 15px 12px;   
+   
+  }
+}
+@media (max-width:1000px) {
+  .ProfileNav {
+    display: none;
+  }
+}
+@media (max-width:800px) {
+   
+}
+@media (max-width:680px) {
+   
+}
+@media (max-width:580px) {
+   
+}
+@media (max-width:480px) {
+   
+  
+}

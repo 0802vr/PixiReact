@@ -1,0 +1,23 @@
+@use "./variables.scss" as variables;
+
+@mixin text-description {
+  font-family: variables.$text-primary;
+  color: variables.$text-description-color;
+  font-size: 18px;
+  line-height: 110%;
+
+  @media (min-width: 320px) {
+    margin-top: clamp(8px, 2.324px + 1.351vw, 10px);
+  }
+
+  @media (min-width: 568px) {
+  }
+
+  @media (min-width: 1440px) {
+    font-size: clamp(1.125rem, 0.75rem + 0.417vw, 1.25rem);
+  }
+
+  @media (min-width: 1920px) {
+    line-height: 120%x;
+  }
+}
